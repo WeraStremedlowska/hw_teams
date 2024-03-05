@@ -6,15 +6,18 @@
       <option name="ignoredModules">
         <list>
           <option value="Algoritms" />
+          <option value="hw_teams" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="org.webjars:jquery:3.7.1" />
+          <option value="org.webjars:jquery:3.7.1" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
         </list>
       </option>
