@@ -1,4 +1,4 @@
-public class DayOfWeekChooser_19 {
+public class DayOfWeek_19 {
 
     public static String getDayOfWeekChooser(int dayNumber) {
 
