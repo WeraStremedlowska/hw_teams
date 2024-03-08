@@ -7,7 +7,7 @@ public class PrintDayOfTheWeekWithTheNumber { //Виктория К
         String[] dayOfTheWeek = {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
         for (int i = 0; i < dayOfTheWeek.length; i++) {
             if (dayOfTheWeek[i].equals(dayName)) {
-                return ++i; // Викуля я добавила ++++
+                return ++i; // Викуля я добавила +
             }
         }
         return -1;
