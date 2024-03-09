@@ -3,7 +3,7 @@ public class PrintDayOfTheWeekWithTheNumber { //Виктория К
     //Написать метод, который принимает на вход название дня недели и возвращает порядковый номер от 1 до 7,
     // соответствующий данному дню недели
 
-    public static int getDayOfTheWeek(String dayName) {
+    public static int getNumberOfTheWeek(String dayName) {
         int dayNumber;
         switch (dayName) {
             case "Monday":
