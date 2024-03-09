@@ -2,6 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class StorePriceComparatorTest {
+
     @Test  // Olga Safronova
     public void testHappyPathFindMinPrice() {
         String[] storePrices =
