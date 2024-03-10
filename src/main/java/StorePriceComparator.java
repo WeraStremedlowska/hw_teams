@@ -29,11 +29,31 @@ public class StorePriceComparator {
 
     private static Integer extractPrice(String storePrice) {
         try {
-            return Integer.parseInt(storePrice.replaceAll("[^0-9]+", ""));
+            // First, remove all non-digit and non-dot characters to clean the input.
+            String cleanedPrice = storePrice.replaceAll("[^0-9.]+", "");
+            // Check if the price contains a decimal point.
+            if (cleanedPrice.contains(".")) {
+                // Count the number of digits after the decimal point.
+                int digitsAfterDecimal = cleanedPrice.length() - cleanedPrice.indexOf('.') - 1;
+                if (digitsAfterDecimal >= 3) {
+                    // Remove the dot for thousands.
+                    cleanedPrice = cleanedPrice.replaceAll("\\.", "");
+                    return Integer.parseInt(cleanedPrice);
+                } else {
+                    // For other cases, parse as double and convert to integer (removing any decimal part).
+                    double price = Double.parseDouble(cleanedPrice);
+
+                    return (int) price;
+                }
+            } else {
+
+                return Integer.parseInt(cleanedPrice);
+            }
         } catch (NumberFormatException e) {
             return null;
         }
     }
+
 
     private static String extractStoreName(String storePrice) {
         // Split by space or colon, then rejoin parts excluding the last (price) part
