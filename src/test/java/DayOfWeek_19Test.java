@@ -31,7 +31,7 @@ public class DayOfWeek_19Test {
     }
 
     @Test
-    public void testTheLastDayOfTheWeek(){
+    public void testTheLastDayOfTheWeek() {
         String expectedResult = "Sunday";
         String actualResult = DayOfWeek_19.getDayOfWeekChooser(7);
 
@@ -39,11 +39,12 @@ public class DayOfWeek_19Test {
     }
 
     @Test
-    public void testTheFirstDayOfTheWeek(){
+    public void testTheFirstDayOfTheWeek() {
         String expectedResult = "Monday";
         String actualResult = DayOfWeek_19.getDayOfWeekChooser(1);
 
         Assert.assertEquals(actualResult, expectedResult);
+
     }
 
 }
