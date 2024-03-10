@@ -44,6 +44,6 @@ public class DayOfWeek_19Test {
         String actualResult = DayOfWeek_19.getDayOfWeekChooser(1);
 
         Assert.assertEquals(actualResult, expectedResult);
-    }
 
+    }
 }
