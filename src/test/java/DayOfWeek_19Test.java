@@ -45,6 +45,6 @@ public class DayOfWeek_19Test {
 
         Assert.assertEquals(actualResult, expectedResult);
 
-    }
 
+    }
 }
