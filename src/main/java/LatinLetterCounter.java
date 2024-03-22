@@ -16,7 +16,8 @@ public class LatinLetterCounter {
 
 
 
-    public int countLatinLetters(String text) {
+    public String countLatinLetters(String text) {
+
         int count = 0;
 
         for (char letter : text.toCharArray()) {
@@ -27,10 +28,11 @@ public class LatinLetterCounter {
             }
         }
 
-        return count;
+        return String.valueOf(count);
 
 
     }
+
 
 
 }
