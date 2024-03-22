@@ -3,7 +3,7 @@ import java.util.Set;
 
 /**
  * Sprint3, Task 23
- *Написать метод, который принимает на вход текст
+ * Написать метод, который принимает на вход текст
  * и возвращает количество латинских символов в тексте
  */
 public class LatinLetterCounter {
@@ -16,7 +16,9 @@ public class LatinLetterCounter {
 
 
 
+
     public String countLatinLetters(String text) {
+
 
         int count = 0;
 
@@ -32,7 +34,5 @@ public class LatinLetterCounter {
 
 
     }
-
-
 
 }
