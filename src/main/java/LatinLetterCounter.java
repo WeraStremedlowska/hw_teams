@@ -17,7 +17,7 @@ public class LatinLetterCounter {
 
 
 
-    public String countLatinLetters(String text) {
+    public static String countLatinLetters(String text) {
 
 
         int count = 0;
