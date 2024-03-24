@@ -32,23 +32,23 @@ public class LatinLetterCounterTest {
     }
 
     @Test
-    public void testCount() {
+    public void testLatinLetterCounter() {
         driver.get(url);
         driver.manage().window().maximize();
 
-        String actualCount = LatinLetterCounter.countLatinLetters(data);
+        String expectedCount = String.valueOf(new LatinLetterCounter().countLatinLetters(data));
 
         sendText(data, TestData.INPUT_XPATH);
         clickButton(TestData.BUTTON_SUBMIT);
 
-        String expectedCount = getText(TestData.CSS_SELECTOR);
+        String actualCount = getText(TestData.CSS_SELECTOR);
 
         Assert.assertEquals(actualCount, expectedCount);
     }
 
     private String getText(String locator) {
         By selector = By.cssSelector(locator);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
         return element.getText();
     }
