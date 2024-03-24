@@ -17,22 +17,21 @@ public class LatinLetterCounter {
 
 
 
-    public static String countLatinLetters(String text) {
+    public int countLatinLetters(String text) {
 
-
+        if (text == null || text.isEmpty()) {
+            return 0;
+        }
         int count = 0;
 
         for (char letter : text.toCharArray()) {
-            // Проверка, является ли символ буквой и принадлежит ли он множеству латинских букв
-            if (Character.isLetter(letter) && LATIN_LETTERS.contains(Character.toUpperCase(letter))
-                    || LATIN_LETTERS.contains(Character.toLowerCase(letter))) {
+            // Проверяем, является ли символ буквой и принадлежит ли он множеству латинских букв
+            if (Character.isLetter(letter) && LATIN_LETTERS.contains(Character.toUpperCase(letter)) || LATIN_LETTERS.contains(Character.toLowerCase(letter))) {
                 count++;
             }
         }
 
-        return String.valueOf(count);
-
-
+        return count;
     }
 
 }
